@@ -16,13 +16,15 @@ You have this `pages` folder where you put all your site's content, in [markdown
 			my first blog.md
 			my second blog.md
 
-Now, when someone visits your index (`www.yoursite.com`), `index.md` will be rendered.  When visiting `www.yoursite.com/about`, `about.md` will be rendered.  When visiting `www.yoursite.com/blog/my-first-blog`, `my first blog.md` will be rendered.  As simple as that.  Once you set up the basic look and feel of your site, all you need to do to maintain and update your site is to edit the markdown documents in your pages directory.
+Now, when someone visits your index (`www.yoursite.com`), `index.md` will be rendered.  When visiting `www.yoursite.com/about`, `about.md` will be rendered.  When visiting `www.yoursite.com/blog/my-first-blog`, `my first blog.md` will be rendered.  As simple as that.  Once you have set up the basic look and feel of your site, all you need to do to maintain and update your site is to edit the markdown documents in your pages directory.
 
 ## Usage
 
+When confused, take a look at `examples/site`.
+
 1. `git clone` this repo.
 2. Edit `config.js`; change `siteDir` to where you want to put your site.
-3. In your site folder, create three folders: `pages`, `public`, `views`.  Optionally create a `config.js`.  If confused, checkout `examples/site`.
+3. In your site folder, create three folders: `pages`, `public`, `views`.  Optionally create a `config.js`.
 4. Put a [Jade](https://github.com/visionmedia/jade) view into `views`, named `index.jade`.  Inside the view, leave an interpolation variable named `content`.  That's where your rendered markdown file will be displayed.
 5. Put some [markdown](http://daringfireball.net/projects/markdown/) documents into `pages`.
 
