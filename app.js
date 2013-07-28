@@ -13,7 +13,7 @@ var siteConfig = require(path.join(sitePath, 'config'))
 var app = express()
 
 // all environments
-app.set('port', process.env.PORT || config.PORT || 3000)
+app.set('port', process.env.PORT || config.port || 3000)
 app.set('views', path.join(sitePath, 'views'))
 app.set('view engine', siteConfig.viewEngine || 'jade')
 app.use(express.favicon(path.join(sitePath, 'public', 'favicon.ico')))
