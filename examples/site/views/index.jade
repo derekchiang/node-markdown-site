@@ -2,7 +2,26 @@ extends layout
 
 block content
   div#header
-    h1 Derek
+    h1= title
+    p #{subtitle}
+
+    div#navigation
+      ul
+        li
+          a(href='/about') about
+        li.link-separator ·
+        li
+          a(href='/essays') essays
+        li.link-separator ·
+        li
+          a(href='http://www.linkedin.com/in/derekchiang93') résumé
+        li.link-separator ·
+        li
+          a(href='https://github.com/derekchiang/') projects
+        li.link-separator ·
+        li.last
+          a(href='mailto:derekchiang93@gmail.com?Subject=Will%20you%20marry%20me?') contact
+      p.hidden whatever
 
   div#content
     div#content-inner!= content

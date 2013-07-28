@@ -15,17 +15,17 @@ function commonRender(res, url) {
   if (fs.existsSync(pagePath)) {
     fs.readFile(pagePath, 'utf8', function(err, data) {
       if (err) throw err
-      res.render(siteConfig.baseView, {
-        content: marked(data)
-      })
+      var siteParams = siteConfig.siteParams || {}
+      siteParams.content = marked(data)
+      res.render(siteConfig.baseView, siteParams)
     })
   } else {
     var path404 = path.join(config.siteDir, "pages", '404.md')
     fs.readFile(path404, 'utf8', function(err, data) {
       if (err) throw err
-      res.render(siteConfig.baseView, {
-        content: marked(data)
-      })
+      var siteParams = siteConfig.siteParams || {}
+      siteParams.content = marked(data)
+      res.render(siteConfig.baseView, siteParams)
     })
   }
 }
@@ -35,6 +35,6 @@ exports.index = function(req, res) {
 }
 
 exports.others = function(req, res) {
-  dir = req.url.split('/').join(path.sep)
+  var dir = req.url.split('/').join(path.sep)
   commonRender(res, dir)
 }

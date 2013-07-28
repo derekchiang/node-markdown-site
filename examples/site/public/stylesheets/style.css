@@ -1,0 +1,76 @@
+@import "http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic,400italic";
+
+body {
+  padding: 50px;
+  font: 300 17px/25px 'Roboto', sans-serif;
+  background-color: silver;
+}
+
+#header, #content {
+  box-shadow: 10px 10px 10px 10px #888888;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-top-right-radius:2em;
+  border-top-left-radius:2em;
+}
+
+#header a {
+  color: #1E23B3;
+  text-align: center;
+  text-decoration: none;
+}
+
+#content {
+  padding-bottom: 40px;
+  border-bottom-right-radius:2em;
+  border-bottom-left-radius:2em;
+}
+
+#header li.link-separator {
+  width: 10px;
+  text-align: center;
+}
+
+#header ul {
+  margin:0;
+  padding: 0;
+  list-style-type:none;
+  text-align: center;
+}
+
+#header li {
+  margin: 0 10px;
+  display: inline;
+  /*float: left;*/
+}
+
+#content-inner {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#content h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+#content p {
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 25px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#content #not-found {
+  color: black;
+  /*font-family: "Courier New",Courier,monospace;*/
+}
