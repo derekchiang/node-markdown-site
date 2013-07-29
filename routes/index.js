@@ -20,7 +20,6 @@ function commonRender(res, url) {
     fs.readFile(pagePath, 'utf8', function(err, data) {
       if (err) throw err
       var siteParams = simpleClone(siteConfig.siteParams) || {}
-      console.log(siteParams)
       siteParams.content = marked(data)
       res.render(siteConfig.baseView, siteParams)
     })
