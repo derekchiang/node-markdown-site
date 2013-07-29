@@ -23,7 +23,16 @@ Now, when someone visits your index (`www.yoursite.com`), `index.md` will be ren
 When confused, take a look at `examples/site`.
 
 1. `git clone` this repo.
-2. Edit `config.js`; change `siteDir` to where you want to put your site.
+2. Create a file called `config.js` in the base directory, in the following format:
+
+```
+module.exports = {
+  siteDir: 'path/to/your/site'
+}
+```
+
+Change `siteDir` to where you want to put your site.
+
 3. In your site folder, create three folders: `pages`, `public`, `views`.  Optionally create a `config.js`.
 4. Put a [Jade](https://github.com/visionmedia/jade) view into `views`, named `index.jade`.  Inside the view, leave an interpolation variable named `content`.  That's where your rendered markdown file will be displayed.
 5. Put some [markdown](http://daringfireball.net/projects/markdown/) documents into `pages`.
