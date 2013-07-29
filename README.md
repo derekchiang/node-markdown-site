@@ -25,13 +25,13 @@ When confused, take a look at `examples/site`.
 1. `git clone` this repo.
 2. Create a file called `config.js` in the base directory, in the following format:
 
-```
-module.exports = {
-  siteDir: 'path/to/your/site'
-}
-```
+	```js
+	module.exports = {
+	  siteDir: 'path/to/your/site'
+	}
+	```
 
-Change `siteDir` to where you want to put your site.
+	Change `siteDir` to where you want to put your site.
 
 3. In your site folder, create three folders: `pages`, `public`, `views`.  Optionally create a `config.js`.
 4. Put a [Jade](https://github.com/visionmedia/jade) view into `views`, named `index.jade`.  Inside the view, leave an interpolation variable named `content`.  That's where your rendered markdown file will be displayed.
